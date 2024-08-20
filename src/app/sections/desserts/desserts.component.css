@@ -1,0 +1,24 @@
+.dessert-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.dessert-container .dessert-products {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 700px) {
+  .dessert-container .dessert-products {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .dessert-container .dessert-products {
+    display: flex;
+    flex-direction: column;
+  }
+}
