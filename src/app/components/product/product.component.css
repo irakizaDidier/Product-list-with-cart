@@ -1,0 +1,37 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.product-container .product-image {
+  position: relative;
+}
+
+.product-container .product-image img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.product-container .product-image app-add-cart-button,
+.product-container .product-image app-add-substract-button {
+  bottom: -1.5rem;
+  left: 15%;
+  position: absolute;
+  width: 70%;
+  z-index: 1;
+}
+
+@media (max-width: 1400px) {
+  .product-container .product-image app-add-cart-button,
+  .product-container .product-image app-add-substract-button {
+    left: 10%;
+    width: 80%;
+  }
+}
+
+.product-container .product-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

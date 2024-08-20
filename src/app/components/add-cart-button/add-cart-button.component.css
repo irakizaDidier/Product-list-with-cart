@@ -1,0 +1,29 @@
+button {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #caafa7;
+  border-radius: 3rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  width: 100%;
+}
+
+@media (max-width: 975px) {
+  button {
+    padding: 0.75rem;
+  }
+}
+
+button:hover {
+  border: 1px solid #c73b0f;
+}
+
+button:hover p {
+  color: #c73b0f;
+}
+
+button:active {
+  transform: translate(1px, 1px);
+}

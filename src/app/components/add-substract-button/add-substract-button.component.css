@@ -1,0 +1,38 @@
+/* Importing variables is not directly possible in CSS, so you need to manually replace any variable with their actual value */
+
+.add-substract-button {
+  align-items: center;
+  background-color: #c73b0f;
+  border: 1px solid #caafa7;
+  border-radius: 3rem;
+  color: #fff;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  width: 100%;
+}
+
+@media (max-width: 975px) {
+  .add-substract-button {
+    padding: 0.75rem;
+  }
+}
+
+.add-substract-button button {
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.add-substract-button button img {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 1.5rem;
+  padding: 0.25rem;
+  width: 1.5rem;
+}
+
+.add-substract-button button:active {
+  transform: translate(1px, 1px);
+}

@@ -1,0 +1,21 @@
+<div class="product-container">
+  <div class="product-image">
+    <img [src]="product.image | imageSize" alt="Product">
+    <ng-container *ngIf="!product.quantity; else quantityTemplate">
+      <app-add-cart-button (add)="addProduct()"></app-add-cart-button>
+    </ng-container>
+    <ng-template #quantityTemplate>
+      <app-add-substract-button
+        [quantity]="product.quantity"
+        (add)="addProduct()"
+        (substract)="substractProduct()">
+      </app-add-substract-button>
+    </ng-template>
+  </div>
+
+  <div class="product-description">
+    <p class="text-preset-4">{{ product.category }}</p>
+    <p class="text-preset-3">{{ product.name }}</p>
+    <p class="text-preset-3 red">{{ product.price | currency }}</p>
+  </div>
+</div>
