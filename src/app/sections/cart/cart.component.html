@@ -6,17 +6,21 @@
 
 <ng-template #cartContent>
   <div class="cart-container">
-    <p class="text-preset-2 red" style="align-self: flex-start;">Your Cart ({{ total() }})</p>
-    <div *ngFor="let product of cartProducts(); let i = index" class="product-item">
+    <p class="text-preset-2 red" style="align-self: flex-start;">Your Cart ({{
+      total() }})</p>
+    <div *ngFor="let product of cartProducts(); let i = index"
+      class="product-item">
       <div class="product-description">
         <p class="text-preset-4-bold">{{ product.name }}</p>
         <div class="product-price">
           <p class="red">{{ product.quantity }}x</p>
           <p class="text-preset-4">&#x40; {{ product.price | currency }}</p>
-          <p class="text-preset-4-bold">{{ (product.quantity * product.price) | currency }}</p>
+          <p class="text-preset-4-bold">{{ (product.quantity * product.price) |
+            currency }}</p>
         </div>
       </div>
-      <button class="remove-product-button" title="Remove product from cart" (click)="removeProduct(product)">
+      <button class="remove-product-button" title="Remove product from cart"
+        (click)="removeProduct(product)">
         <img src="images/icon-remove-item.svg">
       </button>
       <div class="separator"></div>
@@ -28,8 +32,10 @@
     </div>
 
     <div class="cart-carbon-neutral">
-      <img src="images/icon-carbon-neutral.svg" alt="Icon Carbon Neutral">
-      <p class="text-preset-4">This is a <span class="text-preset-4-bold">carbon-neutral</span> delivery</p>
+      <img src="images/icon-carbon-neutral.svg"
+        alt="Icon Carbon Neutral">
+      <p class="text-preset-4">This is a <span
+          class="text-preset-4-bold">carbon-neutral</span> delivery</p>
     </div>
 
     <button class="confirm-order-button" title="Confirm Order" (click)="open()">

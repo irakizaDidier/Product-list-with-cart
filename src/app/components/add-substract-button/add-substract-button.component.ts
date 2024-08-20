@@ -1,21 +1,21 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-add-substract-button',
   templateUrl: './add-substract-button.component.html',
-  styleUrls: ['./add-substract-button.component.css'],
+  styleUrl: './add-substract-button.component.scss',
 })
-export class AddSubtractButtonComponent {
-  @Input() quantity!: number;
+export class AddSubstractButtonComponent {
+  quantity = input.required<number>();
 
-  @Output() add = new EventEmitter<void>();
-  @Output() subtract = new EventEmitter<void>();
+  add = output();
+  substract = output();
 
   onAdd(): void {
     this.add.emit();
   }
 
-  onSubtract(): void {
-    this.subtract.emit();
+  onSubstract(): void {
+    this.substract.emit();
   }
 }

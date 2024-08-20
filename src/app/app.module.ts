@@ -6,7 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddCartButtonComponent } from './components/add-cart-button/add-cart-button.component';
-import { AddSubtractButtonComponent } from './components/add-substract-button/add-substract-button.component';
+import { AddSubstractButtonComponent } from './components/add-substract-button/add-substract-button.component';
 import { ProductComponent } from './components/product/product.component';
 import { ImageSizePipe } from './components/product/shared/image-size.pipe';
 import { CartComponent } from './sections/cart/cart.component';
@@ -17,7 +17,7 @@ import { ModalContentComponent } from './sections/modal-content/modal-content.co
   declarations: [
     AppComponent,
     AddCartButtonComponent,
-    AddSubtractButtonComponent,
+    AddSubstractButtonComponent,
     ProductComponent,
     CartComponent,
     DessertsComponent,

@@ -1,7 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../../models/products.model';
-import { ImageSizePipe } from './shared/image-size.pipe';
-import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product',

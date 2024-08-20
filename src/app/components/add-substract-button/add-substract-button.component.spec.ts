@@ -8,7 +8,7 @@ describe('AddSubstractButtonComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AddSubstractButtonComponent]
+      declarations: [AddSubstractButtonComponent],
     });
     fixture = TestBed.createComponent(AddSubstractButtonComponent);
     component = fixture.componentInstance;

@@ -86,3 +86,53 @@
 .cart-container .confirm-order-button:active {
   transform: translate(1px, 1px);
 }
+/* Initial Modal Style */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animated State */
+.modal-open .modal-content {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Keyframes for smooth animation */
+@keyframes modalShow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.confirm-order-button:active {
+  animation: buttonClick 0.2s ease-in-out;
+}
+
+/* Modal Transition when opened */
+.modal-open .modal-content {
+  animation: modalShow 0.5s ease forwards;
+}

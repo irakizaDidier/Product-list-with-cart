@@ -1,0 +1,20 @@
+.main-container {
+  background-color: #fcf8f6;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 2fr 1fr;
+  padding: 6rem;
+}
+
+@media (max-width: 1400px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 975px) {
+  .main-container {
+    padding: 3rem;
+  }
+}

@@ -1,8 +1,9 @@
-<div class="add-subtract-button" title="Add or Subtract Product">
+<div class="add-substract-button" title="Add or Substract Product">
   <button>
-    <img src="images/icon-decrement-quantity.svg" (click)="onSubtract()" />
+    <img src="images/icon-decrement-quantity.svg"
+      (click)="onSubstract()" />
   </button>
-  <p>{{ quantity }}</p>
+  <p>{{ quantity() }}</p>
   <button>
     <img src="images/icon-increment-quantity.svg" (click)="onAdd()" />
   </button>
