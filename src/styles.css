@@ -1,6 +1,6 @@
 @font-face {
   font-family: "RedHat";
-  src: url("/fonts/RedHatText.ttf") format("opentype");
+  src: url("assets/fonts/RedHatText.ttf") format("opentype");
 }
 
 body,

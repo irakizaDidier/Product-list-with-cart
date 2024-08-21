@@ -22,7 +22,7 @@
   z-index: 1;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
   .product-container .product-image app-add-cart-button,
   .product-container .product-image app-add-substract-button {
     left: 10%;
