@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AddCartButtonComponent } from './components/add-cart-button/add-cart-button.component';
 import { AddSubstractButtonComponent } from './components/add-substract-button/add-substract-button.component';
 import { ProductComponent } from './components/product/product.component';
-import { ImageSizePipe } from './components/product/shared/image-size.pipe';
+import { ImageSizePipe } from './components/product/shared/image-size.pipe'; // Import the pipe
 import { CartComponent } from './sections/cart/cart.component';
 import { DessertsComponent } from './sections/desserts/desserts.component';
 import { ModalContentComponent } from './sections/modal-content/modal-content.component';
@@ -19,6 +19,7 @@ import { ModalContentComponent } from './sections/modal-content/modal-content.co
     AddCartButtonComponent,
     AddSubstractButtonComponent,
     ProductComponent,
+    ImageSizePipe,
     CartComponent,
     DessertsComponent,
     ModalContentComponent,
@@ -26,7 +27,6 @@ import { ModalContentComponent } from './sections/modal-content/modal-content.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ImageSizePipe,
     HttpClientModule,
     ToastrModule.forRoot({}),
   ],

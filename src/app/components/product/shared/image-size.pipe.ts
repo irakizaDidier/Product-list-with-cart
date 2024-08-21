@@ -3,7 +3,6 @@ import { Image } from '../../../models/products.model';
 
 @Pipe({
   name: 'imageSize',
-  standalone: true,
 })
 export class ImageSizePipe implements PipeTransform {
   transform(image: Image): string {
