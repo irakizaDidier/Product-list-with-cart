@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Image } from '../../../models/products.model';
+import { ProductImage } from '../../../models/products.model';
 
 @Pipe({
   name: 'imageSize',
 })
 export class ImageSizePipe implements PipeTransform {
-  transform(image: Image): string {
+  transform(image: ProductImage): string {
     let imageUrl = image.desktop;
 
     if (window.innerWidth < 1000) {
@@ -16,6 +16,6 @@ export class ImageSizePipe implements PipeTransform {
       imageUrl = image.mobile;
     }
 
-    return imageUrl;
+    return `/assets/${imageUrl}`;
   }
 }

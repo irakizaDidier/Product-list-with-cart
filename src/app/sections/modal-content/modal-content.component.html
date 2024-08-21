@@ -1,5 +1,5 @@
 <section class="modal-content">
-  <img class="icon-confirmed" src="images/icon-order-confirmed.svg"
+  <img class="icon-confirmed" src="/assets/images/icon-order-confirmed.svg"
     alt="Icon Order Confirmed">
   <p class="text-preset-1">Order Confirmed</p>
   <p class="text-preset-4">We hope you enjoy your food!</p>
@@ -8,7 +8,8 @@
     <div *ngFor="let product of cartProducts; let i = index"
       class="product-item">
       <div class="product-description">
-        <img [src]="product.image.thumbnail" [alt]="'Product ' + product.name">
+        <img [src]="'/assets/' + product.image.thumbnail"
+          [alt]="'Product ' + product.name">
         <div class="product-name-quantity">
           <p class="text-preset-4-bold rose-900">{{ product.name }}</p>
           <div class="product-quantity">

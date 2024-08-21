@@ -1,6 +1,6 @@
 <div *ngIf="!total(); else cartContent" class="cart-container-empty">
   <p class="text-preset-2 red" style="align-self: flex-start;">Your Cart (0)</p>
-  <img src="images/illustration-empty-cart.svg" alt="Empty Cart">
+  <img src="/assets/images/illustration-empty-cart.svg" alt="Empty Cart">
   <p class="text-preset-4-bold">Your added items will appear here</p>
 </div>
 
@@ -23,7 +23,7 @@
       </div>
       <button class="remove-product-button" title="Remove product from cart"
         (click)="removeProduct(product)">
-        <img src="images/icon-remove-item.svg">
+        <img src="/assets/images/icon-remove-item.svg">
       </button>
     </div>
     <div class="separator"></div>
@@ -34,7 +34,8 @@
     </div>
 
     <div class="cart-carbon-neutral">
-      <img src="images/icon-carbon-neutral.svg" alt="Icon Carbon Neutral">
+      <img src="/assets/images/icon-carbon-neutral.svg"
+        alt="Icon Carbon Neutral">
       <p class="text-preset-4">This is a <span
           class="text-preset-4-bold">carbon-neutral</span> delivery</p>
     </div>
