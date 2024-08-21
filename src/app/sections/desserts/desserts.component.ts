@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
@@ -6,14 +6,11 @@ import { ProductsService } from '../../services/products.service';
   templateUrl: './desserts.component.html',
   styleUrls: ['./desserts.component.css'],
 })
-export class DessertsComponent {
+export class DessertsComponent implements OnInit {
   private service = inject(ProductsService);
-
   products = this.service.products;
 
-  constructor() {
-    console.log('Products:', this.products());
-  }
+  ngOnInit() {}
 
   add(idx: number): void {
     this.service.add(idx);
