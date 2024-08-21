@@ -1,36 +1,39 @@
-<section class="modal-content">
-  <img class="icon-confirmed" src="/assets/images/icon-order-confirmed.svg"
-    alt="Icon Order Confirmed">
-  <p class="text-preset-1">Order Confirmed</p>
-  <p class="text-preset-4">We hope you enjoy your food!</p>
+<div class="modal-backdrop">
+  <section class="modal-content">
+    <img class="icon-confirmed" src="/assets/images/icon-order-confirmed.svg"
+      alt="Icon Order Confirmed">
+    <p class="text-preset-1">Order Confirmed</p>
+    <p class="text-preset-4">We hope you enjoy your food!</p>
 
-  <div class="product-list">
-    <div *ngFor="let product of cartProducts; let i = index"
-      class="product-item">
-      <div class="product-description">
-        <img [src]="'/assets/' + product.image.thumbnail"
-          [alt]="'Product ' + product.name">
-        <div class="product-name-quantity">
-          <p class="text-preset-4-bold rose-900">{{ product.name }}</p>
-          <div class="product-quantity">
-            <span class="red text-preset-4-bold">{{ product.quantity }}x </span>
-            <p class="text-preset-4">&#x40; {{ product.price | currency }}</p>
+    <div class="product-list">
+      <div *ngFor="let product of cartProducts; let i = index"
+        class="product-item">
+        <div class="product-description">
+          <img [src]="'/assets/' + product.image.thumbnail"
+            [alt]="'Product ' + product.name">
+          <div class="product-name-quantity">
+            <p class="text-preset-4-bold rose-900">{{ product.name }}</p>
+            <div class="product-quantity">
+              <span class="red text-preset-4-bold">{{ product.quantity }}x
+              </span>
+              <p class="text-preset-4">&#x40; {{ product.price | currency }}</p>
+            </div>
           </div>
         </div>
+        <p class="text-preset-3">{{ product.quantity * product.price | currency
+          }}</p>
+        <div class="separator"></div>
       </div>
-      <p class="text-preset-3">{{ product.quantity * product.price | currency
-        }}</p>
-      <div class="separator"></div>
+
+      <div class="cart-total">
+        <p class="text-preset-4">Order Total</p>
+        <p class="text-preset-2"> {{ totalPrice | currency }} </p>
+      </div>
     </div>
 
-    <div class="cart-total">
-      <p class="text-preset-4">Order Total</p>
-      <p class="text-preset-2"> {{ totalPrice | currency }} </p>
-    </div>
-  </div>
-
-  <button class="start-order-button" title="Start New Order"
-    (click)="startOrder()">
-    <p class="text-preset-3 white">Start New Order</p>
-  </button>
-</section>
+    <button class="start-order-button" title="Start New Order"
+      (click)="startOrder()">
+      <p class="text-preset-3 white">Start New Order</p>
+    </button>
+  </section>
+</div>
