@@ -68,6 +68,9 @@
   justify-content: center;
   padding: 1rem;
 }
+.confirm-order-button {
+  cursor: pointer;
+}
 
 .cart-container .confirm-order-button {
   align-items: center;
