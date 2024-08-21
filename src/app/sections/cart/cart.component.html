@@ -14,8 +14,10 @@
         <p class="text-preset-4-bold">{{ product.name }}</p>
         <div class="product-price">
           <p class="red">{{ product.quantity }}x</p>
-          <p class="text-preset-4">&#x40; {{ product.price | currency }}</p>
-          <p class="text-preset-4-bold">{{ (product.quantity * product.price) |
+          <p class="text-preset-4"><span>&#x40;</span>{{ product.price |
+            currency }}</p>
+          <p class="text-preset-4-bold">{{ (product.quantity *
+            product.price) |
             currency }}</p>
         </div>
       </div>
@@ -23,8 +25,8 @@
         (click)="removeProduct(product)">
         <img src="images/icon-remove-item.svg">
       </button>
-      <div class="separator"></div>
     </div>
+    <div class="separator"></div>
 
     <div class="cart-total">
       <p class="text-preset-4">Order Total</p>

@@ -2,9 +2,9 @@
   <div class="product-image">
     <img [src]="product.image | imageSize" alt="Product"
       [class.border-black]="product.quantity > 0">
-    <ng-container *ngIf="!product.quantity; else quantityTemplate">
+    <div *ngIf="!product.quantity; else quantityTemplate">
       <app-add-cart-button (add)="addProduct()"></app-add-cart-button>
-    </ng-container>
+    </div>
     <ng-template #quantityTemplate>
       <app-add-substract-button
         [quantity]="product.quantity"

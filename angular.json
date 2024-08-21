@@ -3,33 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ProductListWithCart": {
+    "product-list-with-cart": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "css",
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
+          "standalone": false
         },
         "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
+          "standalone": false
         },
         "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
+          "standalone": false
         }
       },
       "root": "",
@@ -37,14 +21,17 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/product-list-with-cart",
             "index": "src/index.html",
-            "browser": "src/main.ts",
-            "polyfills": ["zone.js", "@angular/localize/init"],
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js",
+              "src/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "css",
             "assets": [
               {
                 "glob": "**/*",
@@ -85,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ProductListWithCart:build:production"
+              "buildTarget": "product-list-with-cart:build:production"
             },
             "development": {
-              "buildTarget": "ProductListWithCart:build:development"
+              "buildTarget": "product-list-with-cart:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,9 +86,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "css",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "publicassets"
+              }
+            ],
             "styles": ["src/styles.css"],
             "scripts": []
           }
@@ -110,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "bee8899e-a7c7-4858-a739-3afd0bacb94f"
+    "analytics": "dbaf45fc-e843-44bb-b7bf-907508efb7f3"
   }
 }

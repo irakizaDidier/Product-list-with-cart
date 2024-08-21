@@ -28,11 +28,10 @@
   flex-direction: column;
   gap: 0.8rem;
 }
-
 .cart-container .product-item .product-description .product-price {
   align-items: center;
   display: flex;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .cart-container .product-item .remove-product-button {

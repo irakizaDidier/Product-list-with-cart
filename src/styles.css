@@ -60,3 +60,37 @@ p {
   letter-spacing: 0px;
   line-height: 150%;
 }
+.red {
+  color: #c73b0f;
+}
+
+.rose-900 {
+  color: #260f08;
+}
+.rose-500 {
+  color: #87635a;
+}
+.rose-400 {
+  color: #ad8a85;
+}
+.rose-300 {
+  color: #caafa7;
+}
+.rose-100 {
+  color: #f5eeec;
+}
+.rose-50 {
+  color: #fcf8f6;
+}
+
+.green {
+  color: #1ea575;
+}
+
+.black {
+  color: #000000;
+}
+
+.white {
+  color: #ffffff;
+}

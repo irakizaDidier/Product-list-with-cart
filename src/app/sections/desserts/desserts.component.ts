@@ -11,6 +11,10 @@ export class DessertsComponent {
 
   products = this.service.products;
 
+  constructor() {
+    console.log('Products:', this.products());
+  }
+
   add(idx: number): void {
     this.service.add(idx);
   }
