@@ -39,9 +39,7 @@ export class ProductsService {
         this._products.set(data);
         this.storageService.setStorage(data);
       },
-      error: (err) => {
-        console.error('Failed to load initial data:', err);
-      },
+      error: (err) => {},
     });
   }
 
