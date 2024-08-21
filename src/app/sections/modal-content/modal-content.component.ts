@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../../models/products.model';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,21 +6,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-modal-content',
   templateUrl: './modal-content.component.html',
   styleUrls: ['./modal-content.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ModalContentComponent {
   @Input() products: Product[] = [];
+  @Input() totalPrice: number = 0;
 
   constructor(private modalService: NgbModal) {}
 
   get cartProducts(): Product[] {
     return this.products.filter((product) => product.quantity > 0);
-  }
-
-  get total(): number {
-    return this.products.reduce(
-      (accumulator, product) => accumulator + product.quantity * product.price,
-      0
-    );
   }
 
   startOrder(): void {

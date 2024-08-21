@@ -86,7 +86,6 @@
 .cart-container .confirm-order-button:active {
   transform: translate(1px, 1px);
 }
-/* Initial Modal Style */
 .modal-content {
   position: fixed;
   top: 50%;
@@ -97,14 +96,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Animated State */
 .modal-open .modal-content {
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
-/* Keyframes for smooth animation */
 @keyframes modalShow {
   0% {
     transform: translate(-50%, -50%) scale(0.8);
@@ -132,7 +129,6 @@
   animation: buttonClick 0.2s ease-in-out;
 }
 
-/* Modal Transition when opened */
 .modal-open .modal-content {
   animation: modalShow 0.5s ease forwards;
 }

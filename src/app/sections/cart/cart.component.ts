@@ -47,7 +47,8 @@ export class CartComponent {
         size: 'lg',
       }
     );
-    modalRef.componentInstance.products = this.products;
+    modalRef.componentInstance.products = this.products();
+    modalRef.componentInstance.totalPrice = this.totalPrice();
 
     modalRef.dismissed.subscribe((reason: any) => {
       if (reason === 2) {

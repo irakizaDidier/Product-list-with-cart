@@ -8,8 +8,7 @@
     <div *ngFor="let product of cartProducts; let i = index"
       class="product-item">
       <div class="product-description">
-        <img [src]="product.image.thumbnail"
-          [alt]="'Product' + product.name">
+        <img [src]="product.image.thumbnail" [alt]="'Product ' + product.name">
         <div class="product-name-quantity">
           <p class="text-preset-4-bold rose-900">{{ product.name }}</p>
           <div class="product-quantity">
@@ -25,7 +24,7 @@
 
     <div class="cart-total">
       <p class="text-preset-4">Order Total</p>
-      <p class="text-preset-2">{{ total | currency }}</p>
+      <p class="text-preset-2"> {{ totalPrice | currency }} </p>
     </div>
   </div>
 

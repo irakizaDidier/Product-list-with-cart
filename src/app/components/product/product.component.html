@@ -1,6 +1,7 @@
 <div class="product-container">
   <div class="product-image">
-    <img [src]="product.image | imageSize" alt="Product">
+    <img [src]="product.image | imageSize" alt="Product"
+      [class.border-black]="product.quantity > 0">
     <ng-container *ngIf="!product.quantity; else quantityTemplate">
       <app-add-cart-button (add)="addProduct()"></app-add-cart-button>
     </ng-container>

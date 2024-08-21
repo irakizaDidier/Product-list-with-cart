@@ -35,3 +35,7 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.border-black {
+  border: 2px solid #c73b0f;
+}

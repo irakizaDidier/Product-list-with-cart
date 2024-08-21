@@ -1,12 +1,11 @@
-/* Ensure the body and modal container fill the viewport and center content */
 body {
   margin: 0;
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling when modal is open */
+  overflow: hidden;
 }
 
 .modal-backdrop {
-  background: rgba(0, 0, 0, 0.5); /* Optional: dim the background */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {

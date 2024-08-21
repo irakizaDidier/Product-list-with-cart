@@ -27,9 +27,9 @@
 .add-substract-button button img {
   border: 1px solid #fff;
   border-radius: 50%;
-  height: 1.5rem;
-  padding: 0.25rem;
-  width: 1.5rem;
+  height: 0.9rem;
+  padding: 0.17rem;
+  width: 0.9rem;
   cursor: pointer;
 }
 
