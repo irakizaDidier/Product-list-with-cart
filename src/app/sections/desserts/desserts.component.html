@@ -1,16 +1,13 @@
 <section class="dessert-container">
   <p class="text-preset-1">Desserts</p>
   <div class="dessert-products">
-    <ng-container
+    <div
       *ngFor="let product of products(); let idx = index; trackBy: trackByIndex">
       <app-product
         [product]="product"
         (add)="add(idx)"
         (substract)="substract(idx)">
       </app-product>
-      <div>
-        <p>testing</p>
-      </div>
-    </ng-container>
+    </div>
   </div>
 </section>
